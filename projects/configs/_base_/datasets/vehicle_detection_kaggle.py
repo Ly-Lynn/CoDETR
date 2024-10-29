@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'CocoDataset'
-data_root = '/kaggle/CoDETR/data/vehicle/'
+data_root = '/kaggle/input/track1-traffic-vehicle-detection/vehicle full.v1i.coco/'
 classes = ("0", "1", "2", "3",)
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
@@ -35,19 +35,19 @@ data = dict(
     train=dict(
         classes=classes,
         type=dataset_type,
-        ann_file=data_root + 'annotations/train_annotations.coco.json',
+        ann_file=data_root + 'train/_annotations.coco.json',
         img_prefix=data_root + 'train/',
         pipeline=train_pipeline),
     val=dict(
         classes=classes,
         type=dataset_type,
-        ann_file=data_root + 'annotations/val_annotations.coco.json',
-        img_prefix=data_root + 'val/',
+        ann_file=data_root + 'valid/_annotations.coco.json',
+        img_prefix=data_root + 'valid/',
         pipeline=test_pipeline),
     test=dict(
         classes=classes,
         type=dataset_type,
-        ann_file=data_root + 'annotations/test_annotations.coco.json',
+        ann_file=data_root + 'test/_annotations.coco.json',
         img_prefix=data_root + 'test/',
         pipeline=test_pipeline))
 evaluation = dict(interval=1, metric='bbox')
