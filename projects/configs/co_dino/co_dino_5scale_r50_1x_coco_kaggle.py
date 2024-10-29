@@ -17,7 +17,7 @@ model = dict(
         norm_cfg=dict(type='BN', requires_grad=False),
         norm_eval=True,
         style='pytorch',
-        init_cfg=dict(type='Pretrained', checkpoint='/kaggle/Vehicle-Detection/Co-DETR/data/pretrained_models/co_dino_5scale_r50_1x_coco.pth')),
+        init_cfg=dict(type='Pretrained', checkpoint='/kaggle/CoDETR/data/pretrained_models/co_dino_5scale_r50_1x_coco.pth')),
     neck=dict(
         type='ChannelMapper',
         in_channels=[256, 512, 1024, 2048],
