@@ -1,5 +1,5 @@
 _base_ = [
-    'co_deformable_detr_r50_1x_coco.py'
+    'co_deformable_detr_r50_1x_coco_kaggle.py'
 ]
 pretrained = '/kaggle/CoDETR/data/pretrained_models/co_deformable_detr_swin_base_3x_coco.pth'
 # model settings
